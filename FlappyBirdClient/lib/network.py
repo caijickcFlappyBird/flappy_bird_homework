@@ -52,3 +52,8 @@ def request_notice():
     send_data = get_send_data()
     send_data['notice'] = 'request notice'
     netstream.send(sock, send_data)
+
+def post_score(score):
+    send_data = get_send_data()
+    send_data['score'] = score
+    netstream.send(sock, send_data)
